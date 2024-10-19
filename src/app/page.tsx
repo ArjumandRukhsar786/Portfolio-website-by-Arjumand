@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect } from 'react'
+import Image from 'next/image';
 import Typewriter from 'typewriter-effect';
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
@@ -90,12 +91,13 @@ export default function Home() {
     <div className='rounded-full bg-purple-500 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative
      hover:bg-cyan-300  hover:shadow-cyan-500 hover:border-t-2 transition-all duration-500 hover:border-cyan-500
      shadow-lg  '>
-      <img 
-      alt="hero"
-      className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
+    <Image 
+      alt='hero'
+      src={"/images/hero-image.png"}
+       className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2'
       width={300}
-      height={300}
-      src="/images/hero-image.png"/>
+      height={300}>
+    </Image>
     </div>
   </div>
 </section>
@@ -211,7 +213,7 @@ export default function Home() {
 </section>
 </section>
 
-{/* image card */}
+{/* PROJECT image card  */}
 
 <section className="text-gray-600 body-font bg-gray-900">
   <div className="container px-5 py-8 mx-auto" data-aos="zoom-in-up">
@@ -222,8 +224,15 @@ export default function Home() {
       {/* card 1 */}
       <div className="p-4 lg:w-1/4 md:w-1/2 ">
         <div className="h-full flex flex-col items-center text-center">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-           src="https://t4.ftcdn.net/jpg/06/10/12/17/240_F_610121776_YNuUn3cuA8gYQAzSlKpHTGob6CHOeDIh.jpg"/>
+         {/*Image tag  */}
+          <Image 
+           alt='team'
+           src={"/images/5.jpg"}
+           className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+           width={300}
+           height={300}
+          >
+          </Image>
           <div className="w-full">
             <h2 className="title-font font-medium text-lg text-white">Project 1: ATM</h2>
             <p className="mb-4 text-white text-sm leading-relaxed">Description:A simulation of an ATM system that handles deposite,withdrawl,and balance inquries,Useful for understanding user input and data management.</p>
@@ -235,8 +244,15 @@ export default function Home() {
       {/* card 2 */}
       <div className="p-4 lg:w-1/4 md:w-1/2">
         <div className="h-full flex flex-col items-center text-center">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkJe5cujkAToaqPF6YIwRBaSSWWRVSA-VgLg&s"/>
+         {/* Image */}
+         <Image 
+           alt='team'
+           src={"/images/6.png"}
+           className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+           width={300}
+           height={300}
+          >
+          </Image>
           <div className="w-full">
             <h2 className="title-font font-medium text-lg text-white">Project 2: Calculator</h2>
             <p className="mb-4  text-white text-sm leading-relaxed">
@@ -251,8 +267,15 @@ export default function Home() {
       {/* card 3 */}
       <div className="p-4 lg:w-1/4 md:w-1/2">
         <div className="h-full flex flex-col items-center text-center">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
-           src="/images/about-image.png"/>
+          {/* Image */}
+          <Image 
+           alt='team'
+           src={"/images/about-image.png"}
+           className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+           width={300}
+           height={300}
+          >
+          </Image>
           <div className="w-full">
             <h2 className="title-font font-medium text-lg text-white">Project 3: Advanture Game</h2>
             <p className="mb-4 text-white text-sm leading-relaxed">
@@ -267,8 +290,15 @@ export default function Home() {
       {/* card 4 */}
       <div className="p-4 lg:w-1/4 md:w-1/2">
         <div className="h-full flex flex-col items-center text-center">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4" 
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6wBvYlrZk13itVoPfRZBJu2QnfPmDT_hFKA&s"/>
+      {/* Image */}
+         <Image 
+           alt='team'
+           src={"/images/7.png"}
+           className="flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4"
+           width={300}
+           height={300}
+          >
+          </Image>
           <div className="w-full">
             <h2 className="title-font font-medium text-lg text-white">Project 4: Currency Convertor</h2>
             <p className="mb-4 text-white text-sm leading-relaxed">
@@ -354,11 +384,13 @@ export default function Home() {
     </div>
    
     <button className="bg-purple-700 flex mx-auto mt-16 py-3 px-5 rounded-lg items-center hover:bg-yellow-600 focus:outline-none">
-       <img
-       alt="icon"
-       className='w-15 h-10'
-       src="/images/git-icon.png"
-       />
+    <Image 
+           alt='team'
+           src={"/images/git-icon.png"}
+           width={45}
+           height={45}
+          >
+          </Image>
         <span className="ml-4 flex items-start flex-col leading-none">
           <span className="text-xs text-white mb-1">Visit My GitHub</span>
           <span className="title-font font-bold text-black">@Arjumand Rukhsar</span>
@@ -490,10 +522,16 @@ export default function Home() {
     <div className="flex flex-wrap -m-4">
       <div className="p-4 lg:w-1/2">
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 
-           mb-4 border-2 border-yellow-500 hover:grayscale" 
-           src="/images/3.png"/>
-
+         {/* Image-1 */}
+         <Image
+          alt='team'
+          src={"/images/3.png"}
+          className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center
+           sm:mb-0 mb-4 border-2 border-yellow-500 hover:grayscale" 
+           width={150}
+           height={150}
+         >
+         </Image>
 
           <div className="flex-grow sm:pl-8">
             <h2 className="title-font font-medium text-lg text-sky-400">Ahmad Khan</h2>
@@ -529,9 +567,16 @@ export default function Home() {
 
       <div className="p-4 lg:w-1/2">
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center
+           {/* Image-2 */}
+           <Image
+          alt='team'
+          src={"/images/4.png"}
+          className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center
            sm:mb-0 mb-4 border-2 border-yellow-500 hover:grayscale" 
-          src="/images/4.png"/>
+           width={150}
+           height={150}
+         >
+         </Image>
           <div className="flex-grow sm:pl-8">
             <h2 className="title-font font-medium text-lg text-sky-500">Izhar Sheikh</h2>
             <h3 className="title-font sm:text-2xl text-3xl mb-4 font-medium text-yellow-500"><Typewriter
@@ -565,9 +610,16 @@ export default function Home() {
       <div className="p-4 lg:w-1/2">
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
           
-          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center
+           {/* Image-3 */}
+           <Image
+          alt='team'
+          src={"/images/2.png"}
+          className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center
            sm:mb-0 mb-4 border-2 border-yellow-500 hover:grayscale" 
-          src="/images/2.png"/>
+           width={250}
+           height={250}
+         >
+         </Image>
 
           <div className="flex-grow sm:pl-8">
             <h2 className="title-font font-medium text-lg text-sky-500">Hoorain Fatima</h2>
@@ -601,10 +653,16 @@ export default function Home() {
 
       <div className="p-4 lg:w-1/2">
         <div className="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
-          <img alt="team" className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center
+            {/* Image-4 */}
+            <Image
+          alt='team'
+          src={"/images/1.png"}
+          className="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center
            sm:mb-0 mb-4 border-2 border-yellow-500 hover:grayscale" 
-          src="/images/1.png"
-          />
+           width={250}
+           height={250}
+         >
+         </Image>
           <div className="flex-grow sm:pl-8">
             <h2 className="title-font font-medium text-lg text-sky-500">Musan Ali</h2>
             <h3 className="title-font sm:text-2xl text-3xl mb-4 font-medium text-yellow-500"><Typewriter
